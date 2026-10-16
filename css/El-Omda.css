@@ -1,0 +1,226 @@
+/* Start Variables */
+
+:root {
+  --main-color: #b4233c;
+  --main-color-alt: #7f1d2d;
+  --main-transition: 0.4s;
+}
+
+/* End Variables */
+/* Start Globel Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;
+}
+ul {
+    list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Smallar Mobile S */
+@media (min-width: 320px){
+  .container {
+    width: 315px;
+  }
+}
+/* Smallar Mobile M */
+@media (min-width: 375px){
+  .container {
+    width: 365px;
+  }
+}
+/* Smallar Mobile L */
+@media (min-width: 425px){
+  .container {
+    width: 415px;
+  }
+}
+/* Small & Tablet */
+@media (min-width: 768px){
+  .container {
+    width: 753px;
+  }
+}
+/* Medium */
+@media (min-width: 992px){
+  .container {
+    width: 969px;
+  }
+}
+/* Large */
+@media (min-width: 1200px){
+  .container {
+    width: 1170px;
+  }
+}
+/* End Globel Rules */
+
+/* Start main-heading */
+
+/* End main-heading */
+
+/* Start Header */
+
+header {
+  background-color: white;
+  box-shadow: 0 0 10px #ddd;
+  position: relative;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+header .container .logo {
+  color: var(--main-color);
+  font-size: 26px;
+  font-weight: bold;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  header .container .logo {
+    width: 100%;
+    height: 50px;
+  }
+}
+header .container .nav {
+  display: flex;
+}
+@media (max-width: 767px) {
+  header .container .nav {
+    margin: auto;
+  }
+}
+header .container .nav > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  position: relative;
+  color: black;
+  padding: 0 30px;
+  transition: var(--main-transition);
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  header .container .nav > li > a {
+    padding: 10px;
+    font-size: 14px;
+    height: 40px;
+  }
+}
+header .container .nav > li > a::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background-color: var(--main-color);
+  top: 0;
+  left: -50%;
+  transition: var(--main-transition);
+}
+header .container .nav > li > a::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background-color: var(--main-color);
+  top: 0;
+  right: -50%;
+  transition: var(--main-transition);
+}
+header .container .nav > li > a:hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+header .container .nav > li > a:hover::after {
+  right: 0;
+}
+header .container .nav > li > a:hover::before {
+  left: 0;
+}
+/* End Header */
+
+/* Start Landing */
+
+.landing {
+  position: relative;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 100%;
+  height: 100%;
+  background-color: #ececec;
+  z-index: -1;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+.landing .container {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  padding-bottom: 120px;
+}
+.landing .container .text {
+  flex: 1;
+}
+.landing .container .text h1 {
+font-size: 40px;
+margin: 0;
+letter-spacing: -2px;
+}
+.landing .container .text p {
+  font-size: 22px;
+  line-height: 1.8;
+  margin: 5px;
+  color: #666;
+  max-width: 500px;
+}
+.landing .image img {
+  width: 600px;
+  max-width: 100%;
+}
+.landing .go-down {
+  color: var(--main-color);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--main-transition);
+}
+.landing .go-down:hover {
+  color: var(--main-color-alt);
+}
+.landing .go-down i {
+  
+}
+/* End Landing */
