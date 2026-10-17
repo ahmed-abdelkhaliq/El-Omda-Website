@@ -72,11 +72,84 @@ a {
     width: 1170px;
   }
 }
+
+/* Start Main Title */
+
+.main-title {
+  border: 3px solid black;
+  color: black;
+  padding: 10px 20px;
+  margin: 50px auto;
+  font-size: 32px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: var(--main-transition);
+}
+.main-title:hover {
+  color: white;
+  border: 3px solid white;
+  transition-delay: .7s;
+}
+.main-title::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: var(--main-color);
+  position: absolute;
+  border-radius: 50%;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: var(--main-color);
+  position: absolute;
+  border-radius: 50%;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title:hover::before {
+  z-index: -1;
+  animation: left-move .7s linear forwards;
+}
+.main-title:hover::after {
+  z-index: -1;
+  animation: right-move .7s linear forwards;
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+/* End Main Title */
+
 /* End Globel Rules */
-
-/* Start main-heading */
-
-/* End main-heading */
 
 /* Start Header */
 
