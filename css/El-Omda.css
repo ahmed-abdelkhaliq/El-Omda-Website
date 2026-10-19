@@ -1,8 +1,8 @@
 /* Start Variables */
 
 :root {
-  --main-color: #b4233c;
-  --main-color-alt: #7f1d2d;
+  --main-color: #f44036;
+  --main-color-alt: #fca5a5;
   --main-transition: 0.4s;
   --main-padding-top: 100px;
   --main-padding-bottom: 100px;
@@ -509,6 +509,8 @@ header .container .nav li .mega-menu .links li a i {
 /* End Articles */
 
 /* Start Gallery */
+
+/* Start Features */
 .gallery {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
@@ -562,3 +564,124 @@ header .container .nav li .mega-menu .links li a i {
   }
 }
 /* End Gallery */
+.features {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: white;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.features .container .box {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.features .container .box .image {
+  position: relative;
+  overflow: hidden;
+}
+.features .container .box .image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.features .container .box .image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 0px 120px 500px;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition);
+}
+.features .container .box .image img {
+  max-width: 100%;
+}
+.features .container .box:hover .image::after {
+  border-width: 120px 500px 120px 0px;
+  border-color: transparent transparent white transparent;
+  left: 0;
+}
+.features .container .box h2 {
+position: relative;
+font-size: 40px;
+margin: auto;
+width: fit-content;
+}
+.features .container .box h2::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  height: 5px;
+  width: calc(100% - 20px);
+}
+.features .container .box p {
+  line-height: 2;
+  font-size: 20px;
+  margin: 30px 0px;
+  padding: 25px;
+  color: #777;
+}
+.features .container .box a {
+  display: block;
+  border: 3px solid;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0 auto 30px;
+  padding: 10px 30px;
+  border-radius: 6px;
+  transition: var(--main-transition);
+}
+.features .container .box:hover a {
+  background-position: left bottom;
+  color: white;
+}
+.features .container .quality .image::before {
+background-color: rgb(244 64 54 / 50%);
+}
+.features .container .quality h2::after {
+  background-color: #f44036;
+}
+.features .container .quality a {
+  color: #f44036;
+  border-color: #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .container .time .image::before {
+  background-color: rgb(0 150 136 / 50%);
+}
+.features .container .time h2::after {
+  background-color: #009688;
+}
+.features .container .time a {
+  color: #009688;
+  border-color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .container .passion .image::before {
+  background-color: rgb(3 169 244 / 50%);
+}
+.features .container .passion h2::after {
+  background-color: #03a9f4;
+}
+.features .container .passion a {
+  color: #03a9f4;
+  border-color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+/* End Features */
